@@ -1,0 +1,50 @@
+@import "./reset.css";
+
+:root {
+  /* Primary Indigo Palette */
+  --primary-color: #4f46e5;
+  --primary-color-hover: #4338ca;
+  --dark-primary-color: #312e81;
+  --nav-color-hover: #e0e7ff;
+
+  /* Secondary Accent */
+  --secondary-color: #f59e0b;
+  --dark-secondary-color: #d97706;
+
+  /* Backgrounds */
+  --background-color: #f8fafc;
+  --muted-background-color: #eef2ff;
+  --border-color: #e5e7eb;
+
+  /* Text */
+  --text-color: #1e293b;
+  --muted-text-color: #64748b;
+
+  /* Base */
+  --white: #ffffff;
+
+  /* Typography */
+  --small-font: 1.4rem;
+  --medium-font: 1.6rem;
+  --large-font: 2.4rem;
+  --xl-font: 3.2rem;
+  --xxl-font: 4.8rem;
+
+  /* Layout */
+  --radius: 8px;
+  --section-padding: 10rem 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
