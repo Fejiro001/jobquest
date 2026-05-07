@@ -28,7 +28,7 @@ This project focuses on practical job search functionalities, map interactions, 
 
 ## Key Implementation Details
 
-### Location Detection and Map Interaction
+### API Integration
 
 ```js
 ```
