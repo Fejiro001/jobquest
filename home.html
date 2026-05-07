@@ -78,8 +78,41 @@
     </header>
     <main>
       <div class="container">
-        <aside class="sidebar-left"></aside>
-        <article class="main-content"></article>
+        <aside class="sidebar-left">
+          <div class="profile-container">
+            <img src="./assets/media/profile.png" alt="Profile image" />
+          </div>
+          <div class="profile-info">
+            <h2 title="Oghenefejiro Stephanie Abere">Oghenefejiro Stephanie Abere</h2>
+            <ul class="user-info">
+              <li><i class="fa-solid fa-suitcase"></i><span>Full-Stack Developer</span></li>
+              <li><i class="fa-solid fa-location-dot"></i><span>Winnipeg,MB</span></li>
+              <li><i class="fa-solid fa-link"></i><a target="_blank" href="https://github.com/Fejiro001">github.com/Fejiro001</a></li>
+            </ul>
+          </div>
+          <div class="profile-stats">
+            <p>Connections<span>767</span></p>
+            <p>Profile Views<span>60</span></p>
+          </div>
+        </aside>
+        <div class="main-content">
+          <section class="form-container">
+            <form id="posts-form">
+              <textarea name="post" id="post" placeholder="What's on your mind?" rows="8"></textarea>
+              <div class="form-footer">
+                <div class="file-input">
+                  <label for="file" title="Select an image">
+                    <i class="fa-solid fa-image"></i>
+                  </label>
+                  <input type="file" name="file" id="file" accept="image/*" />
+                  <span class="file-name"></span>
+                </div>
+                <button id="post-button" type="submit">Post</button>
+              </div>
+            </form>
+          </section>
+          <section class="posts-container" id="posts-section"></section>
+        </div>
         <aside class="sidebar-right"></aside>
       </div>
     </main>
