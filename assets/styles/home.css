@@ -147,6 +147,7 @@ input::placeholder {
 main {
   margin-top: 7.5rem;
   padding-block: 3rem;
+  color: var(--text-color);
 }
 
 .main-container {
@@ -180,4 +181,49 @@ aside,
   height: 8rem;
   border: 5px solid var(--white);
   border-radius: 50%;
+}
+
+.profile-info {
+  margin-top: 2rem;
+  padding: 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.profile-name {
+  font-size: var(--medium-font);
+}
+
+.user-info,
+.user-info a {
+  margin-top: 0.8rem;
+  font-size: var(--small-font);
+  color: var(--muted-text-color);
+}
+
+.user-info li:not(:last-child) {
+  padding-bottom: 0.2rem;
+}
+
+.user-info i {
+  margin-right: 0.5rem;
+}
+
+.user-info a:hover {
+  text-decoration: underline;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  font-size: var(--small-font);
+  color: var(--muted-text-color);
+}
+
+.profile-stats span {
+  display: block;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: var(--medium-font);
 }
