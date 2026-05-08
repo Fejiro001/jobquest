@@ -8,7 +8,7 @@
     <title>JobQuest</title>
     <link rel="icon" href="./assets/media/favicon.png?v=2" type="image/x-icon" />
     <script src="./assets/script/app.js" defer></script>
-    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="stylesheet" href="./assets/styles/home.css" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,5 +25,239 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="container header-container">
+        <div class="header-left">
+          <div class="logo">
+            <img src="./assets/media/images/logo.svg" alt="JobQuest Logo" />
+            <h1>JobQuest</h1>
+          </div>
+          <form class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search" />
+          </form>
+        </div>
+        <nav class="header-center">
+          <ul class="nav-list">
+            <li title="Home">
+              <a href="#">
+                <i class="fa-solid fa-house" aria-hidden="true"></i>
+                <span>Home</span>
+              </a>
+            </li>
+            <li title="Network">
+              <a href="#">
+                <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+                <span>Network</span>
+              </a>
+            </li>
+            <li title="Jobs">
+              <a href="#">
+                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                <span>Jobs</span>
+              </a>
+            </li>
+            <li title="Messaging">
+              <a href="#"> <i class="fa-solid fa-message" aria-hidden="true"></i> <span>Messaging</span> </a>
+            </li>
+            <li title="Notifications">
+              <a href="#">
+                <i class="fa-solid fa-bell" aria-hidden="true"></i>
+                <span>Notifications</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-right">
+          <a title="Sign Out" href="index.html">
+            <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>
+            <span>Sign Out</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container main-container">
+        <aside class="sidebar-left">
+          <div class="profile-container">
+            <img src="./assets/media/images/profile.png" alt="Profile image" />
+          </div>
+          <div class="profile-info">
+            <h2 class="profile-name" title="Stephanie Abere">Stephanie Abere</h2>
+            <ul class="user-info">
+              <li><i class="fa-solid fa-suitcase"></i><span>Full-Stack Developer</span></li>
+              <li><i class="fa-solid fa-location-dot"></i><span>Winnipeg,MB</span></li>
+              <li>
+                <i class="fa-solid fa-link"></i
+                ><a target="_blank" rel="noopener noreferrer" href="https://github.com/Fejiro001">github.com/Fejiro001</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="profile-stats">
+            <li>Connections<span>767</span></li>
+            <li>Profile Views<span>60</span></li>
+          </ul>
+        </aside>
+        <div class="main-content">
+          <section class="form-container">
+            <form id="posts-form">
+              <textarea name="post" id="post" placeholder="Start a post..." rows="6"></textarea>
+              <div class="form-footer">
+                <div class="file-input">
+                  <label for="file" title="Select an image">
+                    <i class="fa-solid fa-image"></i>
+                  </label>
+                  <input type="file" name="file" id="file" accept="image/*" />
+                  <span class="file-name">Photo</span>
+                </div>
+                <button class="button primary-button" id="post-button" type="submit">Post</button>
+              </div>
+            </form>
+          </section>
+          <section class="posts-container" id="posts-section">
+            <article>
+              <div class="post-header">
+                <div class="post-left">
+                  <div class="profile-image-container">
+                    <img class="profile-image" src="./assets/media/images/profile.png" alt="User profile image" />
+                  </div>
+                  <h2>Stephanie Abere</h2>
+                </div>
+                <time datetime="2026-05-07">May 07, 2026</time>
+              </div>
+              <p>
+                Excited to share that I just completed my Full Stack Web Development certification! Looking forward to new opportunities in
+                the tech industry. #coding #WebDev
+              </p>
+              <img class="post-image" src="./assets/media/images/post-one.jpg" alt="Stephanie Abere's post image" />
+              <div class="like-counter">
+                <i class="fa-solid fa-heart"></i>
+                <span>52</span>
+              </div>
+              <ul class="post-footer">
+                <li>
+                  <button>
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Like</span>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <i class="fa-regular fa-comment"></i>
+                    <span>Comment</span>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <span>Share</span>
+                  </button>
+                </li>
+              </ul>
+            </article>
+            <article>
+              <div class="post-header">
+                <div class="post-left">
+                  <div class="profile-image-container">
+                    <img class="profile-image" src="./assets/media/images/profile.png" alt="User profile image" />
+                  </div>
+                  <h2>Stephanie Abere</h2>
+                </div>
+                <time datetime="2026-05-07">May 07, 2026</time>
+              </div>
+              <p>
+                Excited to share that I just completed my Full Stack Web Development certification! Looking forward to new opportunities in
+                the tech industry. #coding #WebDev
+              </p>
+              <img class="post-image" src="./assets/media/images/post-two.jpg" alt="Stephanie Abere's post image" />
+              <div class="like-counter">
+                <i class="fa-solid fa-heart"></i>
+                <span>20</span>
+              </div>
+              <ul class="post-footer">
+                <li>
+                  <button>
+                    <i class="fa-regular fa-heart"></i>
+                    <span>Like</span>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <i class="fa-regular fa-comment"></i>
+                    <span>Comment</span>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <i class="fa-solid fa-share-nodes"></i>
+                    <span>Share</span>
+                  </button>
+                </li>
+              </ul>
+            </article>
+          </section>
+        </div>
+        <aside class="sidebar-right">
+          <div class="known-people">
+            <div class="sidebar-heading">
+              <i class="fa-solid fa-users"></i>
+              <h2>People you may know</h2>
+            </div>
+            <ul class="known-people-list"></ul>
+          </div>
+          <div class="trending">
+            <div class="sidebar-heading">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+              <h2>Trending</h2>
+            </div>
+            <ul class="trending-list">
+              <li>
+                <h3>#TechJobs2026</h3>
+                <p>2,430 readers</p>
+              </li>
+              <li>
+                <h3>#RemoteWork</h3>
+                <p>5,210 readers</p>
+              </li>
+              <li>
+                <h3>#JavaScript</h3>
+                <p>10,050 readers</p>
+              </li>
+              <li>
+                <h3>#CareerGrowth</h3>
+                <p>1,850 readers</p>
+              </li>
+            </ul>
+          </div>
+          <div class="news">
+            <div class="sidebar-heading">
+              <i class="fa-solid fa-newspaper"></i>
+              <h2>Today's News</h2>
+            </div>
+            <ul class="news-list">
+              <li>Tech industry sees a record hiring in Q1 2026</li>
+              <li>Top 10 skills employers are looking for this year</li>
+              <li>Remote work trends continue to grow globally</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-container">
+        <div class="company-name">
+          <img src="./assets/media/images/logo.svg" alt="JobQuest logo" />
+          <p>JobQuest Corporation &copy; 2026</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Privacy & Terms</a></li>
+          <li><a href="#">Advertising</a></li>
+          <li><a href="#">Business Services</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
