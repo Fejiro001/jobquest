@@ -63,7 +63,7 @@ usersList.addEventListener("click", (e) => {
 
   button.classList.toggle("connected");
 
-  if (button.innerText.includes("Connect")) {
+  if (button.innerText === "Connect") {
     button.innerHTML = `
       <i class="fa-solid fa-check"></i>Connected`;
   } else {
