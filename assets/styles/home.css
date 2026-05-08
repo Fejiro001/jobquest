@@ -270,10 +270,25 @@ textarea {
 .fa-image {
   font-size: var(--large-font);
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.fa-image:hover {
+  color: var(--primary-color);
+}
+
+.file-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 input[type="file"] {
   display: none;
+}
+
+.file-input label {
+  line-height: 0;
 }
 
 .file-name {
