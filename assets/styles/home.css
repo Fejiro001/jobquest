@@ -126,7 +126,6 @@ header {
 
 .search-bar input {
   margin-left: 1.5rem;
-  background-color: var(--muted-color);
   padding: 0.8rem 1.5rem 0.8rem 4rem;
   border-radius: var(--radius);
   box-shadow: 0 2px 5px 0 rgba(100, 116, 139, 0.5);
