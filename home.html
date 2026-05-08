@@ -105,9 +105,9 @@
                     <i class="fa-solid fa-image"></i>
                   </label>
                   <input type="file" name="file" id="file" accept="image/*" />
-                  <span class="file-name">Add Image</span>
+                  <span class="file-name">Photo</span>
                 </div>
-                <button class="primary-button" id="post-button" type="submit">Post</button>
+                <button class="button primary-button" id="post-button" type="submit">Post</button>
               </div>
             </form>
           </section>
@@ -148,17 +148,37 @@
         </div>
         <aside class="sidebar-right">
           <div class="known-people">
-            <h2>People you may know</h2>
+            <div class="sidebar-heading">
+              <i class="fa-solid fa-users"></i>
+              <h2>People you may know</h2>
+            </div>
             <ul class="known-people-list">
               <li>
-                <div class="person-info">
+                <div class="person-list-item">
                   <div class="person-image">
                     <img src="./assets/media/profile.png" alt="description" />
                   </div>
-                  <h3>John Doe</h3>
-                  <p>Winnipeg, Manitoba</p>
+                  <div class="person-info">
+                    <h3>John Doe</h3>
+                    <p>Winnipeg</p>
+                  </div>
                 </div>
-                <button class="secondary-button">
+                <button id="connect-btn" class="button secondary-button">
+                  <i class="fa-solid fa-user-plus"></i>
+                  <span>Connect</span>
+                </button>
+              </li>
+              <li>
+                <div class="person-list-item">
+                  <div class="person-image">
+                    <img src="./assets/media/profile.png" alt="description" />
+                  </div>
+                  <div class="person-info">
+                    <h3>John Doe</h3>
+                    <p>Winnipeg</p>
+                  </div>
+                </div>
+                <button id="connect-btn" class="button secondary-button">
                   <i class="fa-solid fa-user-plus"></i>
                   <span>Connect</span>
                 </button>
@@ -166,7 +186,10 @@
             </ul>
           </div>
           <div class="trending">
-            <h2>Trending</h2>
+            <div class="sidebar-heading">
+              <i class="fa-solid fa-arrow-trend-up"></i>
+              <h2>Trending</h2>
+            </div>
             <ul class="trending-list">
               <li>
                 <h3>#TechJobs2026</h3>
@@ -187,7 +210,10 @@
             </ul>
           </div>
           <div class="news">
-            <h2>Today's News</h2>
+            <div class="sidebar-heading">
+              <i class="fa-solid fa-newspaper"></i>
+              <h2>Today's News</h2>
+            </div>
             <ul class="trending-list">
               <li>Tech industry sees a record hiring in Q1 2026</li>
               <li>Top 10 skills employers are looking for this year</li>
