@@ -5,10 +5,11 @@ const postImage = document.getElementById("file");
 const imageFileName = document.querySelector(".file-name");
 const postContainer = document.getElementById("posts-section");
 const usersList = document.querySelector(".known-people-list");
+const connectButtons = document.querySelectorAll(".connect-btn");
 
 let imageChild = null;
 let loggedUserName = "Stephanie Abere";
-const randomUserURL = "https://randomuser.me/api/?nat=CA&results=10";
+const randomUserURL = "https://randomuser.me/api/?results=10";
 
 const options = {
   method: "GET",
@@ -28,9 +29,8 @@ async function getUsers(endpointURL) {
   }
 }
 
-async function getUserInfo() {
+async function addUsers() {
   const users = await getUsers(randomUserURL);
-  console.log(users);
 
   users.forEach((user) => {
     const userInfo = `
@@ -44,9 +44,9 @@ async function getUserInfo() {
             <p>${user.location.city}</p>
           </div>
         </div>
-        <button id="connect-btn" class="button secondary-button">
+        <button id="connect-btn" class="connect-btn button secondary-button">
           <i class="fa-solid fa-user-plus"></i>
-          <span>Connect</span>
+          Connect
         </button>
       </li>`;
 
@@ -54,7 +54,25 @@ async function getUserInfo() {
   });
 }
 
-getUserInfo();
+addUsers();
+
+// Change styling when "Connect" button is clicked
+usersList.addEventListener("click", (e) => {
+  const button = e.target.closest("#connect-btn");
+
+  if (!button) return;
+
+  e.target.classList.toggle("connected");
+  if (e.target.innerText === "Connect") {
+    e.target.innerHTML = `
+      <i class="fa-solid fa-check"></i>
+      Connected`;
+  } else {
+    e.target.innerHTML = `
+      <i class="fa-solid fa-user-plus"></i>
+      Connect`;
+  }
+});
 
 function createImageFile() {
   const file = postImage.files[0];

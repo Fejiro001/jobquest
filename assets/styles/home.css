@@ -388,12 +388,12 @@ input[type="file"] {
   padding-top: 1.5rem;
   margin-top: 0.5rem;
   font-size: var(--small-font);
-  
+
   li,
   button {
     width: 100%;
   }
-  
+
   button {
     background: none;
     padding: 0.7rem;
@@ -495,7 +495,9 @@ input[type="file"] {
   font-size: var(--small-font);
 }
 
-.connected {
+.connected:not(i),
+.connected:not(i):hover {
+  color: var(--white);
   border-color: var(--secondary-color);
   background-color: var(--dark-secondary-color);
 }
