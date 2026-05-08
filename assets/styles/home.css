@@ -71,6 +71,7 @@ header {
   background-color: var(--white);
   height: 7.5rem;
   position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
   width: 100%;
@@ -353,5 +354,29 @@ input[type="file"] {
 
   h2 {
     font-size: var(--medium-font);
+  }
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  .search-bar {
+    display: none;
+  }
+
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .nav-list a span,
+  .header-right a span {
+    display: none;
+  }
+
+  .nav-list a i,
+  .header-right a i {
+    font-size: 2rem;
   }
 }
