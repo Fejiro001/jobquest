@@ -4,9 +4,57 @@ const postText = document.getElementById("post");
 const postImage = document.getElementById("file");
 const imageFileName = document.querySelector(".file-name");
 const postContainer = document.getElementById("posts-section");
+const usersList = document.querySelector(".known-people-list");
 
 let imageChild = null;
 let loggedUserName = "Stephanie Abere";
+const randomUserURL = "https://randomuser.me/api/?nat=CA&results=10";
+
+const options = {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/JSON; charset=UTF-8"
+  },
+  mode: "cors"
+};
+
+async function getUsers(endpointURL) {
+  try {
+    const result = await fetch(endpointURL, options);
+    const data = await result.json();
+    return data.results;
+  } catch (error) {
+    alert(error.message);
+  }
+}
+
+async function getUserInfo() {
+  const users = await getUsers(randomUserURL);
+  console.log(users);
+
+  users.forEach((user) => {
+    const userInfo = `
+      <li>
+        <div class="person-list-item">
+          <div class="person-image">
+            <img src=${user.picture.large} alt="User profile image" />
+          </div>
+          <div class="person-info">
+            <h3>${user.name.first} ${user.name.last}</h3>
+            <p>${user.location.city}</p>
+          </div>
+        </div>
+        <button id="connect-btn" class="button secondary-button">
+          <i class="fa-solid fa-user-plus"></i>
+          <span>Connect</span>
+        </button>
+      </li>`;
+
+    usersList.insertAdjacentHTML("beforeend", userInfo);
+  });
+}
+
+getUserInfo();
 
 function createImageFile() {
   const file = postImage.files[0];

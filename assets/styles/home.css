@@ -252,8 +252,8 @@ aside,
 }
 
 .profile-stats {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
   gap: 2rem;
   padding: 2rem;
   font-size: var(--small-font);
