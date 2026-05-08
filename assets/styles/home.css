@@ -346,3 +346,12 @@ input[type="file"] {
 .post-image {
   border-radius: var(--radius);
 }
+
+/* RIGHT SIDEBAR */
+.sidebar-right div {
+  padding: 2rem;
+
+  h2 {
+    font-size: var(--medium-font);
+  }
+}
