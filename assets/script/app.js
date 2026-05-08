@@ -25,7 +25,7 @@ async function getUsers(endpointURL) {
     const data = await result.json();
     return data.results;
   } catch (error) {
-    alert(error.message);
+    console.error(error.message);
   }
 }
 
@@ -44,9 +44,8 @@ async function addUsers() {
             <p>${user.location.city}</p>
           </div>
         </div>
-        <button id="connect-btn" class="connect-btn button secondary-button">
-          <i class="fa-solid fa-user-plus"></i>
-          Connect
+        <button class="connect-btn button secondary-button">
+          <i class="fa-solid fa-user-plus"></i>Connect
         </button>
       </li>`;
 
@@ -58,19 +57,18 @@ addUsers();
 
 // Change styling when "Connect" button is clicked
 usersList.addEventListener("click", (e) => {
-  const button = e.target.closest("#connect-btn");
+  const button = e.target.closest(".connect-btn");
 
   if (!button) return;
 
-  e.target.classList.toggle("connected");
-  if (e.target.innerText === "Connect") {
-    e.target.innerHTML = `
-      <i class="fa-solid fa-check"></i>
-      Connected`;
+  button.classList.toggle("connected");
+
+  if (button.innerText.includes("Connect")) {
+    button.innerHTML = `
+      <i class="fa-solid fa-check"></i>Connected`;
   } else {
-    e.target.innerHTML = `
-      <i class="fa-solid fa-user-plus"></i>
-      Connect`;
+    button.innerHTML = `
+      <i class="fa-solid fa-user-plus"></i>Connect`;
   }
 });
 
@@ -79,7 +77,7 @@ function createImageFile() {
   const fileType = file?.type;
 
   // Validate file type
-  if (!fileType || !fileType.includes("image/")) {
+  if (!fileType || !fileType.startsWith("image/")) {
     imageFileName.textContent = "Wrong file type";
     return;
   }
@@ -113,7 +111,7 @@ function createPostHeader() {
     month: "short",
     day: "2-digit"
   });
-  let dateParagraph = document.createElement("p");
+  let dateParagraph = document.createElement("time");
   dateParagraph.innerText = now;
   postHeader.appendChild(dateParagraph);
 

@@ -355,7 +355,7 @@ input[type="file"] {
   font-weight: 600;
 }
 
-.post-header p {
+.post-header time {
   font-size: var(--small-font);
 }
 
@@ -489,7 +489,7 @@ input[type="file"] {
   }
 }
 
-#connect-btn {
+.connect-btn {
   display: flex;
   align-items: center;
   font-size: var(--small-font);

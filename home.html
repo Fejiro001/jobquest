@@ -42,28 +42,28 @@
           <ul class="nav-list">
             <li title="Home">
               <a href="#">
-                <i class="fa-solid fa-house"></i>
+                <i class="fa-solid fa-house" aria-hidden="true"></i>
                 <span>Home</span>
               </a>
             </li>
             <li title="Network">
               <a href="#">
-                <i class="fa-solid fa-user-group"></i>
+                <i class="fa-solid fa-user-group" aria-hidden="true"></i>
                 <span>Network</span>
               </a>
             </li>
             <li title="Jobs">
               <a href="#">
-                <i class="fa-solid fa-briefcase"></i>
+                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
                 <span>Jobs</span>
               </a>
             </li>
             <li title="Messaging">
-              <a href="#"> <i class="fa-solid fa-message"></i> <span>Messaging</span> </a>
+              <a href="#"> <i class="fa-solid fa-message" aria-hidden="true"></i> <span>Messaging</span> </a>
             </li>
             <li title="Notifications">
               <a href="#">
-                <i class="fa-solid fa-bell"></i>
+                <i class="fa-solid fa-bell" aria-hidden="true"></i>
                 <span>Notifications</span>
               </a>
             </li>
@@ -71,7 +71,7 @@
         </nav>
         <div class="header-right">
           <a title="Sign Out" href="index.html">
-            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <i class="fa-solid fa-arrow-right-from-bracket" aria-hidden="true"></i>
             <span>Sign Out</span>
           </a>
         </div>
@@ -88,13 +88,16 @@
             <ul class="user-info">
               <li><i class="fa-solid fa-suitcase"></i><span>Full-Stack Developer</span></li>
               <li><i class="fa-solid fa-location-dot"></i><span>Winnipeg,MB</span></li>
-              <li><i class="fa-solid fa-link"></i><a target="_blank" href="https://github.com/Fejiro001">github.com/Fejiro001</a></li>
+              <li>
+                <i class="fa-solid fa-link"></i
+                ><a target="_blank" rel="noopener noreferrer" href="https://github.com/Fejiro001">github.com/Fejiro001</a>
+              </li>
             </ul>
           </div>
-          <div class="profile-stats">
-            <p>Connections<span>767</span></p>
-            <p>Profile Views<span>60</span></p>
-          </div>
+          <ul class="profile-stats">
+            <li>Connections<span>767</span></li>
+            <li>Profile Views<span>60</span></li>
+          </ul>
         </aside>
         <div class="main-content">
           <section class="form-container">
@@ -121,7 +124,7 @@
                   </div>
                   <h2>Stephanie Abere</h2>
                 </div>
-                <p>May 07, 2026</p>
+                <time datetime="2026-05-07">May 07, 2026</time>
               </div>
               <p>
                 Excited to share that I just completed my Full Stack Web Development certification! Looking forward to new opportunities in
@@ -161,7 +164,7 @@
                   </div>
                   <h2>Stephanie Abere</h2>
                 </div>
-                <p>May 07, 2026</p>
+                <time datetime="2026-05-07">May 07, 2026</time>
               </div>
               <p>
                 Excited to share that I just completed my Full Stack Web Development certification! Looking forward to new opportunities in
