@@ -34,6 +34,7 @@
             <h1>JobQuest</h1>
           </div>
           <form class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
             <input type="text" placeholder="Search" />
           </form>
         </div>
@@ -98,7 +99,7 @@
         <div class="main-content">
           <section class="form-container">
             <form id="posts-form">
-              <textarea name="post" id="post" placeholder="What's on your mind?" rows="8"></textarea>
+              <textarea name="post" id="post" placeholder="What's on your mind?" rows="6"></textarea>
               <div class="form-footer">
                 <div class="file-input">
                   <label for="file" title="Select an image">
@@ -168,21 +169,6 @@
                   <span>Connect</span>
                 </button>
               </li>
-              <li>
-                <div class="person-list-item">
-                  <div class="person-image">
-                    <img src="./assets/media/profile.png" alt="description" />
-                  </div>
-                  <div class="person-info">
-                    <h3>John Doe</h3>
-                    <p>Winnipeg</p>
-                  </div>
-                </div>
-                <button id="connect-btn" class="button secondary-button">
-                  <i class="fa-solid fa-user-plus"></i>
-                  <span>Connect</span>
-                </button>
-              </li>
             </ul>
           </div>
           <div class="trending">
@@ -224,14 +210,17 @@
       </div>
     </main>
     <footer>
-      <div class="container">
-        <p><img src="./assets/media/logo.svg" alt="JobQuest logo" />JobQuest &copy; 2026</p>
-        <ul>
-          <li>About</li>
-          <li>Help Center</li>
-          <li>Privacy & Terms</li>
-          <li>Advertising</li>
-          <li>Business Services</li>
+      <div class="container footer-container">
+        <div class="company-name">
+          <img src="./assets/media/logo.svg" alt="JobQuest logo" />
+          <p>JobQuest Corporation &copy; 2026</p>
+        </div>
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Privacy & Terms</a></li>
+          <li><a href="#">Advertising</a></li>
+          <li><a href="#">Business Services</a></li>
         </ul>
       </div>
     </footer>
