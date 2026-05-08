@@ -188,6 +188,11 @@ main {
   gap: 3rem;
 }
 
+aside,
+.main-content {
+  height: fit-content;
+}
+
 /* LEFT SIDEBAR */
 .sidebar-left {
   border-radius: var(--radius);
@@ -391,11 +396,16 @@ input[type="file"] {
 .known-people-list li {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 1rem;
 }
 
 .known-people-list li {
   padding-top: 1rem;
+}
+
+.person-list-item {
+  flex: 1;
+  min-width: 0;
 }
 
 .known-people-list li:not(:last-child) {
@@ -408,12 +418,22 @@ input[type="file"] {
   overflow: hidden;
 }
 
-.person-image img {
-  width: 5rem;
+.person-image {
+  min-width: 5rem;
+  max-width: 5rem;
+}
+
+.person-info {
+  min-width: 0;
 }
 
 .person-list-item {
-  gap: 1rem;
+  h3,
+  p {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
 
   h3 {
     font-size: var(--small-font);
@@ -471,6 +491,7 @@ input[type="file"] {
   font-size: var(--small-font);
   color: var(--muted-text-color);
   transition: all 0.3s ease-in-out;
+  margin-top: 1rem;
 }
 
 .news-list li:hover,
