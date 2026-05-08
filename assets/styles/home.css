@@ -121,9 +121,10 @@ header {
 
 .search-bar {
   margin-left: 1.5rem;
-  background-color: #e8eaed;
+  background-color: #f0f0f0;
   border-radius: var(--radius);
   padding: 0.8rem 1.5rem;
+  box-shadow: 0 2px 5px 0 rgba(100, 116, 139, 0.5);
 }
 
 .search-bar::before {
@@ -385,6 +386,7 @@ input[type="file"] {
   }
 }
 
+/* PEOPLE YOU MAY KNOW LIST */
 .person-list-item,
 .known-people-list li {
   display: flex;
@@ -432,6 +434,57 @@ input[type="file"] {
 .connected {
   border-color: var(--secondary-color);
   background-color: var(--dark-secondary-color);
+}
+
+/* TRENDING LIST */
+.trending i {
+  color: var(--secondary-color);
+}
+
+.trending-list {
+  h3 {
+    color: var(--primary-color);
+    font-size: var(--small-font);
+    font-weight: 500;
+  }
+
+  p {
+    color: var(--muted-text-color);
+    font-size: 1.2rem;
+  }
+}
+
+.trending-list li {
+  padding: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.trending-list li:hover {
+  border-radius: var(--radius);
+  background-color: #f0f0f0;
+}
+
+/* NEWS LIST */
+.news-list li {
+  list-style: disc;
+  list-style-position: inside;
+  font-size: var(--small-font);
+  color: var(--muted-text-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.news-list li:hover,
+.trending-list li:hover {
+  cursor: pointer;
+}
+
+.news-list li:hover {
+  color: var(--text-color);
+}
+
+.trending-list li:not(:last-child),
+.news-list li:not(:last-child) {
+  margin-bottom: 1.2rem;
 }
 
 /* Tablet */
