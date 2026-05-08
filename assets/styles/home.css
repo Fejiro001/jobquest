@@ -370,6 +370,15 @@ input[type="file"] {
   border-radius: var(--radius);
 }
 
+.like-counter {
+  justify-self: left;
+  color: var(--muted-text-color);
+
+  i {
+    color: #c12727;
+  }
+}
+
 .post-footer {
   display: flex;
   gap: 1rem;
@@ -379,17 +388,18 @@ input[type="file"] {
   padding-top: 1.5rem;
   margin-top: 0.5rem;
   font-size: var(--small-font);
-
+  
   li,
   button {
     width: 100%;
   }
-
+  
   button {
     background: none;
     padding: 0.7rem;
     border-radius: var(--radius);
     transition: all 0.2s ease-in-out;
+    color: var(--muted-text-color);
   }
 
   button:hover {
