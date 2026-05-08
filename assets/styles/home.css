@@ -22,6 +22,7 @@
 
   /* Base */
   --white: #ffffff;
+  --muted-color: #f0f0f0;
 
   /* Typography */
   --small-font: 1.4rem;
@@ -125,7 +126,7 @@ header {
 
 .search-bar input {
   margin-left: 1.5rem;
-  background-color: #f0f0f0;
+  background-color: var(--muted-color);
   padding: 0.8rem 1.5rem 0.8rem 4rem;
   border-radius: var(--radius);
   box-shadow: 0 2px 5px 0 rgba(100, 116, 139, 0.5);
@@ -338,7 +339,6 @@ input[type="file"] {
 
 .posts-container article p {
   justify-self: left;
-  text-wrap: balance;
 }
 
 .post-header {
@@ -368,6 +368,34 @@ input[type="file"] {
 
 .post-image {
   border-radius: var(--radius);
+}
+
+.post-footer {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+  margin-top: 0.5rem;
+  font-size: var(--small-font);
+
+  li,
+  button {
+    width: 100%;
+  }
+
+  button {
+    background: none;
+    padding: 0.7rem;
+    border-radius: var(--radius);
+    transition: all 0.2s ease-in-out;
+  }
+
+  button:hover {
+    color: var(--primary-color);
+    background-color: var(--muted-color);
+  }
 }
 
 /* RIGHT SIDEBAR */
@@ -487,7 +515,7 @@ input[type="file"] {
 
 .trending-list li:hover {
   border-radius: var(--radius);
-  background-color: #f0f0f0;
+  background-color: var(--muted-color);
 }
 
 /* NEWS LIST */
