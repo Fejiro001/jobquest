@@ -54,11 +54,11 @@ function createPostHeader() {
   let postImage = document.createElement("div");
   postImage.classList.add("profile-image-container");
   postHeaderLeft.appendChild(postImage);
-  
+
   let userName = document.createElement("h2");
   userName.textContent = loggedUserName;
   postHeaderLeft.appendChild(userName);
-  
+
   let profileImage = document.createElement("img");
   profileImage.classList.add("profile-image");
   profileImage.src = "./assets/media/images/profile.png";
@@ -66,6 +66,10 @@ function createPostHeader() {
   postImage.appendChild(profileImage);
 
   return postHeader;
+}
+
+function randomNumber() {
+  return Math.floor(Math.random() * (100 - 10 + 1)) + 10;
 }
 
 function createPost(e) {
@@ -81,6 +85,36 @@ function createPost(e) {
 
   const image = createPostImage(imageChild);
   if (image) postArticle.appendChild(image);
+
+  const likeCounter = `
+    <div class="like-counter">
+      <i class="fa-solid fa-heart"></i>
+      <span>${randomNumber()}</span>
+    </div>`;
+  postArticle.insertAdjacentHTML("beforeend", likeCounter);
+
+  const postFooter = `
+    <ul class="post-footer">
+      <li>
+        <button>
+          <i class="fa-regular fa-heart"></i>
+          <span>Like</span>
+        </button>
+      </li>
+      <li>
+        <button>
+          <i class="fa-regular fa-comment"></i>
+          <span>Comment</span>
+        </button>
+      </li>
+      <li>
+        <button>
+          <i class="fa-solid fa-share-nodes"></i>
+          <span>Share</span>
+        </button>
+      </li>
+    </ul>`;
+  postArticle.insertAdjacentHTML("beforeend", postFooter);
 
   if (text || image) {
     postContainer.prepend(postArticle);
