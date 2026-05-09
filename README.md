@@ -4,7 +4,7 @@
 
 ## Description
 
-**JobQuest** is a professional networking and job finder web application inspired by platforms like LinkedIn. The application allows users to connect with professionals, create posts, explore trending topics, and discover people they may know through dynamic data fetched from the Random User API.
+**JobQuest** is a mock professional networking and job finder web application inspired by platforms like LinkedIn. The application demonstrates how users can connect with professionals, create posts, explore trending topics, and discover people they may know through dynamic data fetched from the Random User API.
 
 The project was built as part of the Introduction to Third-Party APIs course and focuses on modern front-end development practices, semantic HTML structure, API integration, dynamic DOM manipulation, and responsive user interface design.
 
