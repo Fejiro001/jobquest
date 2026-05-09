@@ -70,12 +70,22 @@ input[type="password"] {
 
 #forgotpw {
   font-size: var(--small-font);
-  margin-top: -18px;
+  margin-top: -10px;
   color: var(--muted-text-color);
+}
+
+#forgotpw:hover {
+  color: var(--primary-color);
 }
 
 .buttons {
   justify-content: space-between;
+  gap: 2rem;
+}
+
+input[type="submit"],
+button {
+  width: 100%;
 }
 
 /* Tablet */
