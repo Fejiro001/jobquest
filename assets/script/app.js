@@ -3,6 +3,7 @@
 const login = document.getElementById("login");
 const emailInput = document.getElementById("email");
 const pwInput = document.getElementById("password");
+const errorMessage = document.getElementById("error-message");
 const postForm = document.getElementById("posts-form");
 const postText = document.getElementById("post");
 const postImage = document.getElementById("file");
@@ -22,7 +23,8 @@ function checkInfo() {
   if (emailInput.value === localStorage.getItem("email") && pwInput.value === localStorage.getItem("password")) {
     window.location.href = "home.html";
   } else {
-    alert("Incorrect username or password");
+    errorMessage.innerText = "Incorrect username or password";
+    // alert("Incorrect username or password");
   }
 }
 

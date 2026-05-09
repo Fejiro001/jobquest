@@ -88,6 +88,13 @@ button {
   width: 100%;
 }
 
+#error-message {
+  color: #c12727;
+  background-color: rgb(255, 232, 232);
+  padding: 1rem;
+  border-radius: var(--radius);
+}
+
 /* Tablet */
 @media (max-width: 1023px) {
   #sidebanner {
