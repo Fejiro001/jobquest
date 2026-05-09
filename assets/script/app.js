@@ -22,9 +22,20 @@ localStorage.setItem("password", "hunter2");
 function checkInfo() {
   if (emailInput.value === localStorage.getItem("email") && pwInput.value === localStorage.getItem("password")) {
     window.location.href = "home.html";
+    errorMessage.innerText = "";
+    errorMessage.classList.remove("error-message");
   } else {
-    errorMessage.innerText = "Incorrect username or password";
-    // alert("Incorrect username or password");
+    errorMessage.classList.add("error-message");
+
+    if (emailInput.value === "" && pwInput.value === "") {
+      errorMessage.innerText = "Username and password are required";
+    } else if (emailInput.value !== localStorage.getItem("email")) {
+      errorMessage.innerText = "Incorrect username";
+    } else if (pwInput.value !== localStorage.getItem("password")) {
+      errorMessage.innerText = "Incorrect password";
+    } else {
+      errorMessage.innerText = "Incorrect username or password";
+    }
   }
 }
 
