@@ -7,8 +7,8 @@
     <meta name="description" content="Find your dream job with JobQuest!" />
     <title>JobQuest</title>
     <link rel="icon" href="./assets/media/favicon.png?v=2" type="image/x-icon" />
-    <script src="./assets/script/login.js" defer></script>
-    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <script src="./assets/script/app.js" defer></script>
+    <link rel="stylesheet" href="./assets/styles/index.css" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,11 +44,11 @@
             <label for="password">Password</label>
             <input type="password" id="password">
           </div>
-          
+          <p id="error-message"></p>
           <a id="forgotpw">Forgot password?</a>
           <div class="flex buttons">
-            <input type="submit" value="Log in" id="login">
-            <button id="signup">Sign up</button>
+            <input class="button primary-button" type="submit" value="Log in" id="login">
+            <button class="button secondary-button" id="signup">Sign up</button>
           </div>
         </form>
       </main>

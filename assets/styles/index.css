@@ -1,0 +1,112 @@
+@import "./reset.css";
+@import "./base.css";
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.container,
+.buttons,
+.logo {
+  flex-direction: row;
+}
+
+.logo {
+  position: absolute;
+  inset-inline-start: 40px;
+  inset-block-start: 20px;
+
+  justify-content: space-between;
+
+  img {
+    height: 4rem;
+  }
+
+  h1 {
+    font-size: var(--xl-font);
+    font-weight: 700;
+    margin-left: 1rem;
+  }
+}
+
+#sidebanner {
+  height: 100svh;
+  width: 100rem;
+  background: no-repeat url("https://images.pexels.com/photos/32348995/pexels-photo-32348995.jpeg");
+  background-size: cover;
+  box-shadow: 2px 0 10px 0 rgba(100, 116, 139, 0.2);
+}
+
+main {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: var(--xl-font);
+}
+
+form {
+  gap: 20px;
+  width: 100%;
+  max-width: 50rem;
+}
+
+label {
+  font-weight: 600;
+}
+
+input[type="email"],
+input[type="password"] {
+  font-size: var(--medium-font);
+  border-radius: var(--radius);
+  padding: 1rem 2rem;
+  width: 100%;
+  box-shadow: 0 2px 10px 0 rgba(100, 116, 139, 0.2);
+}
+
+#forgotpw {
+  font-size: var(--small-font);
+  margin-top: -25px;
+  color: var(--muted-text-color);
+}
+
+#forgotpw:hover {
+  color: var(--primary-color);
+}
+
+.buttons {
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+input[type="submit"],
+button {
+  width: 100%;
+}
+
+.error-message {
+  display: block;
+  color: #bc0000;
+  background-color: rgb(255, 232, 232);
+  padding: 1rem;
+  border-radius: var(--radius);
+  font-size: var(--small-font);
+}
+
+/* Tablet */
+@media (max-width: 1023px) {
+  #sidebanner {
+    width: 0px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .logo h1 {
+    display: none;
+  }
+}
