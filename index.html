@@ -27,8 +27,11 @@
   </head>
   <body>
     <div class="flex container">
-      <div>
-        <img href="https://images.pexels.com/photos/34368017/pexels-photo-34368017.jpeg"> <!-- placeholder -->
+      <div id="sidebanner">
+        <div class="logo flex">
+            <img src="./assets/media/images/logo.svg" alt="JobQuest Logo" />
+            <h1>JobQuest</h1>
+          </div>
       </div>
       <main class="flex">
         <form id="login" class="flex">
@@ -42,10 +45,10 @@
             <input type="password" id="password">
           </div>
           
-          <a>Forgot password?</a>
+          <a id="forgotpw">Forgot password?</a>
           <div class="flex buttons">
             <input type="submit" value="Log in" id="login">
-            <button id="login">Sign up</button>
+            <button id="signup">Sign up</button>
           </div>
         </form>
       </main>
