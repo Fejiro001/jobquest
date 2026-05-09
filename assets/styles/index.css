@@ -90,10 +90,11 @@ button {
 
 .error-message {
   display: block;
-  color: #c12727;
+  color: #bc0000;
   background-color: rgb(255, 232, 232);
   padding: 1rem;
   border-radius: var(--radius);
+  font-size: var(--small-font);
 }
 
 /* Tablet */
