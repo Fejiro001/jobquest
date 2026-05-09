@@ -144,3 +144,9 @@ input {
 #signup:hover {
   background-color: var(--nav-color-hover);
 }
+
+@media (max-width: 1023px) {
+  #sidebanner {
+    width: 0px;
+  }
+}
