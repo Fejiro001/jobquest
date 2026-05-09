@@ -70,7 +70,7 @@ input[type="password"] {
 
 #forgotpw {
   font-size: var(--small-font);
-  margin-top: -10px;
+  margin-top: -25px;
   color: var(--muted-text-color);
 }
 
