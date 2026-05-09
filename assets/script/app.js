@@ -1,4 +1,8 @@
 "use strict";
+
+const login = document.getElementById("login");
+const emailInput = document.getElementById("email");
+const pwInput = document.getElementById("password");
 const postForm = document.getElementById("posts-form");
 const postText = document.getElementById("post");
 const postImage = document.getElementById("file");
@@ -10,6 +14,23 @@ const connectButtons = document.querySelectorAll(".connect-btn");
 let imageChild = null;
 let loggedUserName = "Stephanie Abere";
 const randomUserURL = "https://randomuser.me/api/?results=10";
+
+localStorage.setItem("email", "fullname@gmail.com");
+localStorage.setItem("password", "hunter2");
+
+function checkInfo() {
+  if (emailInput.value === localStorage.getItem("email") && pwInput.value === localStorage.getItem("password")) {
+    window.location.href = "home.html";
+  } else {
+    alert("Incorrect username or password");
+  }
+}
+
+login.addEventListener("submit", (event) => {
+  event.preventDefault(); // For Fakebook I just disguised a div as the submit button, but I found this since then
+  // This prevents the browser's default form submission behavior
+  checkInfo();
+});
 
 const options = {
   method: "GET",
