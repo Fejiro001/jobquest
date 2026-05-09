@@ -26,20 +26,29 @@
     />
   </head>
   <body>
-    <div>
-
-    </div>
-    <div>
-      <h1>Welcome Back</h1>
-      <form id="login">
-        <label for="email">Email</label>
-        <input type="email" id="email">
-        <label for="password">Password</label>
-        <input type="password" id="password">
-        <input type="submit" value="log in">
-        <a>Forgot password?</a>
-        <button>Sign up</button>
-      </form>
+    <div class="flex container">
+      <div>
+        <img href="https://images.pexels.com/photos/34368017/pexels-photo-34368017.jpeg"> <!-- placeholder -->
+      </div>
+      <main class="flex">
+        <form id="login" class="flex">
+          <h1>Welcome Back</h1>
+          <div class="flex">
+            <label for="email">Email</label>
+            <input type="email" id="email">
+          </div>
+          <div class="flex">
+            <label for="password">Password</label>
+            <input type="password" id="password">
+          </div>
+          
+          <a>Forgot password?</a>
+          <div class="flex buttons">
+            <input type="submit" value="Log in" id="login">
+            <button id="login">Sign up</button>
+          </div>
+        </form>
+      </main>
     </div>
   </body>
 </html>
